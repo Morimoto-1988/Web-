@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>土佐のおいしいカツオ屋さん</title>
+    <!--リセットCSS-->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
+    <!--フォント-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@300;600&family=Noto+Serif+JP:wght@600;900&family=Noto+Serif:wght@300;600&family=Yuji+Boku&display=swap"
+        rel="stylesheet">
+    <!--CSSリンク-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <!--JQueryリンク-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+
+    <script>
+        /*スライドショー*/
+        $(document).ready(function () {
+            $(".mainVisual__slideshow").bxSlider({
+                auto: "true",
+                mode: "fade",
+                speed: 1000,
+                pause: 3000,
+                pager: false,
+                controls: false,
+            });
+        });
+        /*slick*/
+        $(function () {
+            $('.popularItems__picSlider').slick({
+                asNavFor: ".popularItems__textSlider",
+                autoplay: true,
+                autoplaySpeed: 3000,
+                speed: 1000,
+                arrows: false,
+                swipe: false,
+                slidesToShow: 5,
+                pauseOnFocus: true,
+                pauseOnHover: true,
+            });
+        });
+        $(function () {
+            $('.popularItems__textSlider').slick({
+                autoplaySpeed: 3000,
+                speed: 1000,
+                arrows: false,
+                swipe: false,
+                slidesToShow: 5,
+            });
+        });
+    </script>
+</head>
+
+<body background="./img/background.jpg">
+    <!--ここからヘッダー-->
+    <header>
+        <div class="headerCreateArea">
+            <div class="logo">土佐のおいしいカツオ屋さん</div>
+            <!--メニュー上段-->
+            <div class="menu">
+                <div class="menu__upperRow">
+                    <ul>
+                        <li>商品一覧</li>
+                        <li>会員登録</li>
+                        <li>ご利用ガイド</li>
+                        <li>お問い合わせ</li>
+                    </ul>
+                </div>
+                <!--メニュー下段-->
+                <div class="menu__lowerTier">
+                    <div class="menu__lowerTier__searchFrom">
+                        <input type="search" name="search" placeholder="検索ワードを入力してください"
+                            class="menu__lowerTier__searchFrom--inputForm">
+                        <input type="submit" name="submit" value="検  索"
+                            class="menu__lowerTier__searchFrom--searchButton">
+                    </div>
+                    <div class="menu__lowerTier__button">
+                        <input type="button" value="お買い物かご" class="menu__lowerTier__button--basketButton">
+                        <input type="button" value="ログイン" class="menu__lowerTier__button--loginButton">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-container">
+        <!--ここからメインビジュアル-->
+        <div class="mainVisual">
+            <div class="mainVisual__slideshow">
+                <div><img src="./img/mainvisual01.jpg"></div>
+                <div><img src="./img/mainvisual02.jpg"></div>
+                <div><img src="./img/mainvisual03.jpg"></div>
+                <div><img src="./img/mainvisual04.jpg"></div>
+            </div>
+            <div class="mainVisual__catchcopy">
+                <p>本場高知の新鮮なカツオ</p>
+                <p>こじゃんと美味いき食べてみいや！</p>
+            </div>
+        </div>
+        <!--ここからイチオシ商品-->
+        <div class="featuredProducts">
+            <div class="featuredProducts__CreateArea">
+                <!--見出し-->
+                <div class="featuredProducts__CreateArea__heading">
+                    <p>当店のイチオシ商品</p>
+                </div>
+                <div class="featuredProducts__CreateArea__menu">
+                    <!--1つ目-->
+                    <div class="featuredProducts__CreateArea__menu__list">
+                        <img src="./img/featuredProducts1.jpg">
+                        <div class="featuredProducts__CreateArea__menu__list--menuName">
+                            <p>本格藁焼きの鰹たたき</p>
+                        </div>
+                        <div class="featuredProducts__CreateArea__menu__list--text">
+                            <p>近海で撮れた新鮮なかつおを高知県産の藁で香ばしく焼き、旨味をギュッと閉じ込めました。
+                                一度味わえば病みつきになること間違いなしです！</p>
+                        </div>
+                        <div><input type="button" value="ご購入はこちらから"
+                                class="featuredProducts__CreateArea__menu__list--purchaseButton">
+                        </div>
+                    </div>
+                    <!--2つ目-->
+                    <div class="featuredProducts__CreateArea__menu__list">
+                        <img src="./img/featuredProducts2.jpg">
+                        <div class="featuredProducts__CreateArea__menu__list--menuName">
+                            <p>戻り鰹のお刺身</p>
+                        </div>
+                        <div class="featuredProducts__CreateArea__menu__list--text">
+                            <p>9月頃から獲れ始めるかつおは「戻り鰹」と呼ばれ、脂がたっぷりとのり、もっちりとした食感が楽しめます。
+                                旬の鰹のお刺身を是非ご賞味ください！</p>
+                        </div>
+                        <div><input type="button" value="ご購入はこちらから"
+                                class="featuredProducts__CreateArea__menu__list--purchaseButton">
+                        </div>
+                    </div>
+                    <!--3つ目-->
+                    <div class="featuredProducts__CreateArea__menu__list">
+                        <img src="./img/featuredProducts3.jpg">
+                        <div class="featuredProducts__CreateArea__menu__list--menuName">
+                            <p>鰹のハランボ焼き</p>
+                        </div>
+                        <div class="featuredProducts__CreateArea__menu__list--text">
+                            <p>ハランボとはかつおのトロにあたる部分で、1尾から1枚しか取れません。その脂がのった部位を塩焼きにしました。
+                                ご飯のおかずとしてはもちろん、お酒のおつまみとしても絶品ですよ！</p>
+                        </div>
+                        <div><input type="button" value="ご購入はこちらから"
+                                class="featuredProducts__CreateArea__menu__list--purchaseButton">
+                        </div>
+                    </div>
+                    <!--4つ目-->
+                    <div class="featuredProducts__CreateArea__menu__list">
+                        <img src="./img/featuredProducts4.jpg">
+                        <div class="featuredProducts__CreateArea__menu__list--menuName">
+                            <p>鰹のコロッケ</p>
+                        </div>
+                        <div class="featuredProducts__CreateArea__menu__list--text">
+                            <p>鰹はコロッケにしても美味しいということをご存じでしたか？一口食べれば口の中いっぱいに鰹の旨味が広がります。
+                                当店が自信を持ってオススメする鰹コロッケを是非お試しください！</p>
+                        </div>
+                        <div><input type="button" value="ご購入はこちらから"
+                                class="featuredProducts__CreateArea__menu__list--purchaseButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ここから人気商品-->
+        <div class="popularItems">
+            <!--見出し-->
+            <div class="popularItems__heading">
+                <p>当店の人気商品</p>
+            </div>
+            <!--画像スライダー-->
+            <div class="popularItems__picSlider">
+                <!--1つ目-->
+                <div class="popularItems__picSlider__img">
+                    <img src="./img/slick01.jpg" alt="">
+                    <div class="popularItems__picSlider__img--mouseOverText">
+                        <p>画像をクリックすると<br>商品ページに飛びます</p>
+                    </div>
+                </div>
+                <!--2つ目-->
+                <div class="popularItems__picSlider__img">
+                    <img src="./img/slick02.jpg" alt="">
+                    <div class="popularItems__picSlider__img--mouseOverText">
+                        <p>画像をクリックすると<br>商品ページに飛びます</p>
+                    </div>
+                </div>
+                <!--3つ目-->
+                <div class="popularItems__picSlider__img">
+                    <img src="./img/slick03.jpg" alt="">
+                    <div class="popularItems__picSlider__img--mouseOverText">
+                        <p>画像をクリックすると<br>商品ページに飛びます</p>
+                    </div>
+                </div>
+                <!--4つ目-->
+                <div class="popularItems__picSlider__img">
+                    <img src="./img/slick04.jpg" alt="">
+                    <div class="popularItems__picSlider__img--mouseOverText">
+                        <p>画像をクリックすると<br>商品ページに飛びます</p>
+                    </div>
+                </div>
+                <!--5つ目-->
+                <div class="popularItems__picSlider__img">
+                    <img src="./img/slick05.jpg" alt="">
+                    <div class="popularItems__picSlider__img--mouseOverText">
+                        <p>画像をクリックすると<br>商品ページに飛びます</p>
+                    </div>
+                </div>
+                <!--6つ目-->
+                <div class="popularItems__picSlider__img">
+                    <img src="./img/slick06.jpg" alt="">
+                    <div class="popularItems__picSlider__img--mouseOverText">
+                        <p>画像をクリックすると<br>商品ページに飛びます</p>
+                    </div>
+                </div>
+            </div>
+            <!--文字スライダー-->
+            <div class="popularItems__textSlider">
+                <div>
+                    <p>鰹の梅はさみ揚げ</p>
+                    <p>550円(税込み)</p>
+                </div>
+                <div>
+                    <p>鰹のから揚げ</p>
+                    <p>500円(税込み)</p>
+                </div>
+                <div>
+                    <p>鰹とクリームチーズの春巻</p>
+                    <p>500円(税込み)</p>
+                </div>
+                <div>
+                    <p>鰹のユッケ</p>
+                    <p>550円(税込み)</p>
+                </div>
+                <div>
+                    <p>鰹の生姜煮</p>
+                    <p>450円(税込み)</p>
+                </div>
+                <div>
+                    <p>鰹茶漬け</p>
+                    <p>400円(税込み)</p>
+                </div>
+            </div>
+        </div>
+        <!--ここから旬について-->
+        <div class="bonitoSeason">
+            <div class="bonitoSeason__CreateArea">
+                <!--見出し-->
+                <div class="bonitoSeason__CreateArea__heading">
+                    <p>鰹の旬について</p>
+                </div>
+                <div class="bonitoSeason__CreateArea__content">
+                    <!--左半分-->
+                    <div class="bonitoSeason__CreateArea__content__left">
+                        <img src="./img/bonitoSeason.jpg">
+                    </div>
+                    <!--右半分-->
+                    <div class="bonitoSeason__CreateArea__content__right">
+                        <div class="bonitoSeason__CreateArea__content__right__upperRow">
+                            <div class="bonitoSeason__CreateArea__content__right__upperRow--title">
+                                <p>初鰹</p>
+                            </div>
+                            <div class="bonitoSeason__CreateArea__content__right__upperRow--text">
+                                <p>春の4月～6月頃になると鰹は餌を求めて北上を始めます。この時期に漁獲される鰹を「初鰹」といい、春の旬な食材として知られています。
+                                    初鰹は身が締まっていて脂が少なめであり、さっぱりとしていてプリプリとした食感が楽しめます。</p>
+                            </div>
+                        </div>
+                        <div class="bonitoSeason__CreateArea__content__right__lowerTier">
+                            <div class="bonitoSeason__CreateArea__content__right__lowerTier--title">
+                                <p>戻り鰹</p>
+                            </div>
+                            <div class="bonitoSeason__CreateArea__content__right__lowerTier--text">
+                                <p>北上した鰹は9月～11月頃になると戻ってきます。この時期に漁獲される鰹を「戻り鰹」といい、秋の旬な食材として知られています。
+                                    この戻り鰹は北の冷たい海で過ごし、餌をたっぷりと食べたことによって脂がのっており、もっちりとした食感と濃厚な味わいを楽しめます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ここからお問い合わせフォーム-->
+        <div class="inquiryForm">
+            <div class="inquiryForm__CreateArea">
+                <!--見出し-->
+                <div class="inquiryForm__CreateArea__heading">
+                    <p>お問い合わせフォーム</p>
+                </div>
+                <div class="inquiryForm__CreateArea__inputForm">
+                    <!--左側-->
+                    <div class="inquiryForm__CreateArea__inputForm__text">
+                        <ul>
+                            <li>氏名</li>
+                            <li>メール</li>
+                            <li>電話番号</li>
+                            <li>内容</li>
+                        </ul>
+                    </div>
+                    <!--右側-->
+                    <div class="inquiryForm__CreateArea__inputForm__inputField">
+                        <div><input type="text" name="text"
+                                class="inquiryForm__CreateArea__inputForm__inputField--smallForm"></div>
+                        <div><input type="text" name="text"
+                                class="inquiryForm__CreateArea__inputForm__inputField--smallForm"></div>
+                        <div><input type="text" name="text"
+                                class="inquiryForm__CreateArea__inputForm__inputField--smallForm"></div>
+                        <div><textarea name="textarea"
+                                class="inquiryForm__CreateArea__inputForm__inputField--largeForm"></textarea>
+                        </div>
+                        <div><input type="submit" name="submit" value="送　　信"
+                                class="inquiryForm__CreateArea__inputForm__inputField--sendButton"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--ここからフッター-->
+    <footer>
+        <div class="copyright">
+            <p>Ⓒ 2023 manabiya-sakura</p>
+        </div>
+    </footer>
+</body>
+
+</html>
